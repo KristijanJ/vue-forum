@@ -78,4 +78,17 @@ export default {
 .forum-board-latest-post {
     font-size: 14px;
 }
+
+@media screen and (max-width: 480px) {
+    .forum-board-data {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .forum-board-separator,
+    .forum-board-latest-post {
+        display: none;
+    }
+}
 </style>
