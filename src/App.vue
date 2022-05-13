@@ -4,11 +4,18 @@
         <div class="page-header">
             CATEGORIES
         </div>
-        <forum-board v-for="i in 5" :key="i" class="m-30-b" />
+        <forum-board
+            v-for="(forumBoard, index) in forumBoards"
+            :key="index"
+            class="m-30-b"
+            :forum-board="forumBoard"
+        />
     </div>
 </template>
 
 <script>
+import forumBoardsMockData from './assets/mocks/forumBoardsMockData';
+
 import NavBar from './components/NavBar.vue';
 import ForumBoard from './components/ForumBoard.vue';
 
@@ -17,6 +24,11 @@ export default {
     components: {
         NavBar,
         ForumBoard
+    },
+    data () {
+        return {
+            forumBoards: forumBoardsMockData
+        };
     }
 };
 </script>

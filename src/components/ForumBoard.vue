@@ -1,25 +1,25 @@
 <template>
     <div class="forum-board-wrapper">
         <div class="forum-board-icon m-10-r">
-            <i class="fas fa-paper-plane" />
+            <i :class="forumBoard.icon" />
         </div>
 
         <div class="forum-board-info">
             <div class="forum-board-title">
-                Announcements
+                {{ forumBoard.title }}
             </div>
             <div class="forum-board-description">
-                Announcements regarding our community
+                {{ forumBoard.description }}
             </div>
         </div>
 
         <div class="forum-board-data">
             <div class="forum-board-data-item m-10-r">
-                <span class="forum-board-data-item-num">0</span>
+                <span class="forum-board-data-item-num">{{ forumBoard.topics }}</span>
                 <span class="forum-board-data-item-text">topics</span>
             </div>
             <div class="forum-board-data-item">
-                <span class="forum-board-data-item-num">0</span>
+                <span class="forum-board-data-item-num">{{ forumBoard.posts }}</span>
                 <span class="forum-board-data-item-text">posts</span>
             </div>
         </div>
@@ -34,7 +34,18 @@
 
 <script>
 export default {
-    name: 'ForumBoard'
+    name: 'ForumBoard',
+    props: {
+        forumBoard: {
+            type: Object,
+            required: true
+        }
+    },
+    computed: {
+        iconColor () {
+            return this.forumBoard.iconColor;
+        }
+    }
 };
 </script>
 
@@ -44,12 +55,13 @@ export default {
     align-items: center;
 }
 .forum-board-icon {
-    background: #eeca82;
+    background: v-bind(iconColor);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 16px;
     border-radius: 50%;
+    width: 50px;
+    height: 50px;
     color: #ffffff;
 }
 .forum-board-title {
@@ -72,7 +84,7 @@ export default {
     height: 50px;
     width: 5px;
     border-radius: 2px;
-    background: #eeca82;
+    background: v-bind(iconColor);
     margin: 0 20px;
 }
 .forum-board-latest-post {
