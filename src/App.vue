@@ -4,7 +4,7 @@
         <div class="page-header">
             CATEGORIES
         </div>
-        <forum-board />
+        <forum-board v-for="i in 5" :key="i" class="m-30-b" />
     </div>
 </template>
 
