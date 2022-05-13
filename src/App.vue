@@ -34,26 +34,5 @@ export default {
 </script>
 
 <style>
-#app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: #2c3e50;
-}
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-.page-header {
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-
-.btn {
-    cursor: pointer;
-    padding: 8px 12px;
-    background: #ffffff;
-    border: 1px solid #cccccc;
-    border-radius: 6px;
-}
+@import './assets/css/style.css';
 </style>

@@ -49,7 +49,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .forum-board-wrapper {
     display: flex;
     align-items: center;

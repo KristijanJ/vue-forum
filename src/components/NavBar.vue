@@ -42,7 +42,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .nav-bar-wrapper {
     display: flex;
     justify-content: space-between;
