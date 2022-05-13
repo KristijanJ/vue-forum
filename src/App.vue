@@ -48,4 +48,12 @@ export default {
     text-transform: uppercase;
     margin-bottom: 20px;
 }
+
+.btn {
+    cursor: pointer;
+    padding: 8px 12px;
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+}
 </style>
