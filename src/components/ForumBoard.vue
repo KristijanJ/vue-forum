@@ -5,9 +5,9 @@
         </div>
 
         <div class="forum-board-info">
-            <div class="forum-board-title">
+            <router-link :to="`/board/${forumBoard.id}`" class="forum-board-title">
                 {{ forumBoard.title }}
-            </div>
+            </router-link>
             <div class="forum-board-description">
                 {{ forumBoard.description }}
             </div>
@@ -66,6 +66,7 @@ export default {
 }
 .forum-board-title {
     font-weight: 500;
+    color: #2c3e50;
 }
 .forum-board-description {
     font-size: 12px;
