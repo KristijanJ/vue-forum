@@ -6,7 +6,10 @@
             </router-link>
         </div>
         <post-view :post="selectedForumBoardPost" />
-        <div v-if="selectedForumBoardPost.comments.length" class="post-comment-container">
+        <div v-if="selectedForumBoardPost.comments.length">
+            <div class="post-comments-title">
+                Comments
+            </div>
             <post-comment
                 v-for="(comment, index) in selectedForumBoardPost.comments"
                 :key="index"
@@ -47,8 +50,10 @@ export default {
 </script>
 
 <style scoped>
-.post-comment-container {
+.post-comments-title {
     margin-top: 30px;
+    padding-top: 20px;
+    text-transform: uppercase;
     border-top: 1px solid #cccccc;
 }
 </style>

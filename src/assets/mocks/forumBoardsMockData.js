@@ -38,7 +38,24 @@ const getAnnouncementPosts = () => {
             title: 'Our goals for 2022',
             text: 'Our main goal for 2022 is to be awesome!',
             userPhoto: 'user_one.png',
-            comments: []
+            comments: [
+                {
+                    id: 0,
+                    text: "Hey, don't steal my goal!!!",
+                    author: {
+                        name: 'Andrew Garfield',
+                        userPhoto: 'user_three.jpg'
+                    }
+                },
+                {
+                    id: 1,
+                    text: 'Such a positive note you guys! Stay awesome indeed.',
+                    author: {
+                        name: 'John Snow',
+                        userPhoto: 'user_two.jpg'
+                    }
+                }
+            ]
         },
         {
             id: '1',
