@@ -1,6 +1,7 @@
 <template>
     <div class="page-header">
-        {{ post.title }}
+        <span>{{ post.title }}</span>
+        <span class="m-auto-l">{{ formattedCreatedAt }}</span>
     </div>
     <div class="post-text">
         {{ post.text }}
@@ -20,6 +21,13 @@ export default {
         post: {
             type: Object,
             required: true
+        }
+    },
+    computed: {
+        formattedCreatedAt () {
+            console.log(this.post.createdAt);
+            const date = new Date(this.post.createdAt);
+            return date.toISOString().split('T')[0];
         }
     }
 };
