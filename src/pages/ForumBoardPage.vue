@@ -2,9 +2,9 @@
     <div class="container">
         <div class="page-header">
             <span>{{ selectedForumBoard.title }}</span>
-            <button class="btn m-auto-l">
+            <router-link :to="`/board/${selectedForumBoard.id}/add-new`" class="btn m-auto-l">
                 <i class="fas fa-plus m-5-r" /> Add new post
-            </button>
+            </router-link>
         </div>
         <post-preview
             v-for="(post, index) in selectedForumBoard.posts"
