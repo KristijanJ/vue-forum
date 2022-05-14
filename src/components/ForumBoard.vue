@@ -14,10 +14,6 @@
         </div>
 
         <div class="forum-board-data">
-            <div class="forum-board-data-item m-10-r">
-                <span class="forum-board-data-item-num">{{ forumBoard.topics }}</span>
-                <span class="forum-board-data-item-text">topics</span>
-            </div>
             <div class="forum-board-data-item">
                 <span class="forum-board-data-item-num">{{ forumBoard.posts.length }}</span>
                 <span class="forum-board-data-item-text">posts</span>
