@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { getForumBoards } from '../assets/mocks/forumBoardsMockData';
+import { mapState } from 'vuex';
 
 import ForumBoard from '../components/ForumBoard.vue';
 
@@ -22,14 +22,10 @@ export default {
     components: {
         ForumBoard
     },
-    data () {
-        return {
-            forumBoards: getForumBoards()
-        };
+    computed: {
+        ...mapState([
+            'forumBoards'
+        ])
     }
 };
 </script>
-
-<style>
-
-</style>
