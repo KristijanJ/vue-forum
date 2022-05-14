@@ -8,9 +8,9 @@
             :key="index"
             class="post"
         >
-            <div class="post-text">
-                {{ post.text }}
-            </div>
+            <router-link :to="`/board/${$route.params.id}/post/${post.id}`" class="post-text">
+                {{ post.title }}
+            </router-link>
         </div>
     </div>
 </template>
@@ -35,8 +35,6 @@ export default {
 
 <style scoped>
 .post {
-    margin-bottom: 20px;
-    border-bottom: 1px solid #cccccc;
-    padding-bottom: 10px;
+    margin-bottom: 30px;
 }
 </style>
