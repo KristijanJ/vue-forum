@@ -2,10 +2,14 @@
     <div class="nav-bar-wrapper">
         <div class="nav-bar-left">
             <div class="nav-bar-element">
-                <span>ForumVue</span>
+                <router-link to="/">
+                    <span>ForumVue</span>
+                </router-link>
             </div>
             <div v-for="(link, index) in links" :key="index" class="nav-bar-element">
-                <i :class="link.icon" />
+                <router-link :to="link.route">
+                    <i :class="link.icon" />
+                </router-link>
             </div>
         </div>
         <div class="nav-bar-">
@@ -26,15 +30,18 @@ export default {
             links: [
                 {
                     title: 'Home',
-                    icon: 'fas fa-home'
+                    icon: 'fas fa-home',
+                    route: '/'
                 },
                 {
                     title: 'Latest Posts',
-                    icon: 'fas fa-bars'
+                    icon: 'fas fa-bars',
+                    route: '/latest-posts'
                 },
                 {
                     title: 'Search',
-                    icon: 'fas fa-search'
+                    icon: 'fas fa-search',
+                    route: '/search'
                 }
             ]
         };
@@ -54,6 +61,10 @@ export default {
 }
 .nav-bar-element {
     padding: 10px;
+}
+.nav-bar-element > a {
+    color: #2c3e50;
+    text-decoration: none;
 }
 .nav-bar-element > * {
     cursor: pointer;
