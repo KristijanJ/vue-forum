@@ -1,9 +1,6 @@
 <template>
     <div class="post">
-        <div class="post-user-photo m-10-r" :class="{ 'post-user-photo-bg': !post.userPhoto }">
-            <img v-if="post.userPhoto" :src="`/img/user-photos/${post.userPhoto}`" alt="User photo">
-            <i v-else class="fas fa-user" />
-        </div>
+        <post-author-image-name :post="post" :show-author-name="false" />
         <div class="post-info">
             <router-link :to="`/board/${boardId}/post/${post.id}`" class="post-text">
                 {{ post.title }}
@@ -16,8 +13,13 @@
 </template>
 
 <script>
+import PostAuthorImageName from './PostAuthorImageName.vue';
+
 export default {
     name: 'PostPreview',
+    components: {
+        PostAuthorImageName
+    },
     props: {
         post: {
             type: Object,

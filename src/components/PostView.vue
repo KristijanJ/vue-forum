@@ -5,18 +5,17 @@
     <div class="post-text">
         {{ post.text }}
     </div>
-    <div class="post-author">
-        <div class="post-user-photo m-10-r" :class="{ 'post-user-photo-bg': !post.userPhoto }">
-            <img v-if="post.userPhoto" :src="`/img/user-photos/${post.userPhoto}`" alt="User photo">
-            <i v-else class="fas fa-user" />
-        </div>
-        Author
-    </div>
+    <post-author-image-name :post="post" />
 </template>
 
 <script>
+import PostAuthorImageName from './PostAuthorImageName.vue';
+
 export default {
     name: 'PostView',
+    components: {
+        PostAuthorImageName
+    },
     props: {
         post: {
             type: Object,

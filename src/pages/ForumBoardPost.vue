@@ -6,6 +6,13 @@
             </router-link>
         </div>
         <post-view :post="selectedForumBoardPost" />
+        <div v-if="selectedForumBoardPost.comments.length" class="post-comment-wrapper">
+            <post-comment
+                v-for="(comment, index) in selectedForumBoardPost.comments"
+                :key="index"
+                :post-comment="comment"
+            />
+        </div>
     </div>
 </template>
 
@@ -13,11 +20,13 @@
 import { getForumBoards } from '../assets/mocks/forumBoardsMockData';
 
 import PostView from '../components/PostView.vue';
+import PostComment from '../components/PostComment.vue';
 
 export default {
     name: 'ForumBoardPost',
     components: {
-        PostView
+        PostView,
+        PostComment
     },
     data () {
         return {
@@ -35,3 +44,10 @@ export default {
     }
 };
 </script>
+
+<style scoped>
+.post-comment-wrapper {
+    margin-top: 30px;
+    border-top: 1px solid #cccccc;
+}
+</style>
