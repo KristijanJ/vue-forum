@@ -7,7 +7,8 @@ import { getForumBoards } from '../assets/mocks/forumBoardsMockData';
 
 export default createStore({
     state: {
-        forumBoards: getForumBoards()
+        forumBoards: getForumBoards(),
+        postSearchValue: ''
     },
     actions,
     mutations,

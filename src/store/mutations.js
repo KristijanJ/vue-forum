@@ -20,5 +20,8 @@ export default {
             }
         };
         state.forumBoards[data.boardId].posts[data.postId].comments.push(newComment);
+    },
+    setPostSearchValue (state, data) {
+        state.postSearchValue = data;
     }
 };
