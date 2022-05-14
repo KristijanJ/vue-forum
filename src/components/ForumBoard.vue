@@ -22,7 +22,7 @@
 
         <div class="forum-board-separator" />
 
-        <div class="forum-board-latest-post line-clamp">
+        <div class="forum-board-latest-post line-clamp-2">
             <div v-if="forumBoard.posts.length">
                 <router-link :to="`/board/${forumBoard.id}/post/${latestPost.id}`">
                     {{ latestPost.title }}
