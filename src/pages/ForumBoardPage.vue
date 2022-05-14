@@ -3,32 +3,25 @@
         <div class="page-header">
             {{ selectedForumBoard.title }}
         </div>
-        <div
+        <post-preview
             v-for="(post, index) in selectedForumBoard.posts"
             :key="index"
-            class="post"
-        >
-            <div class="post-user-photo m-10-r" :class="{ 'post-user-photo-bg': !post.userPhoto }">
-                <img v-if="post.userPhoto" :src="`/img/user-photos/${post.userPhoto}`" alt="User photo">
-                <i v-else class="fas fa-user" />
-            </div>
-            <div class="post-info">
-                <router-link :to="`/board/${$route.params.id}/post/${post.id}`" class="post-text">
-                    {{ post.title }}
-                </router-link>
-                <div class="post-text-preview">
-                    {{ post.text.substring(0, 100) + '...' }}
-                </div>
-            </div>
-        </div>
+            :post="post"
+            :board-id="$route.params.id"
+        />
     </div>
 </template>
 
 <script>
 import { getForumBoards } from '../assets/mocks/forumBoardsMockData';
 
+import PostPreview from '../components/PostPreview.vue';
+
 export default {
     name: 'ForumBoardPage',
+    components: {
+        PostPreview
+    },
     data () {
         return {
             forumBoards: getForumBoards()
