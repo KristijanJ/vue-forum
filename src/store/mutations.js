@@ -15,8 +15,8 @@ export default {
             ...data.newComment,
             id: state.forumBoards[data.boardId].posts[data.postId].comments.length,
             author: {
-                name: 'New user',
-                userPhoto: 'user_three.jpg'
+                name: `guest#${Math.floor(1000 + Math.random() * 9000)}`,
+                userPhoto: ''
             }
         };
         state.forumBoards[data.boardId].posts[data.postId].comments.push(newComment);
