@@ -7,6 +7,6 @@ export default {
                 ...board.posts
             ];
         });
-        return posts;
+        return posts.sort((a, b) => b.createdAt - a.createdAt);
     }
 };

@@ -3,6 +3,7 @@ export default {
         const newPost = {
             ...data.newPost,
             id: state.forumBoards[data.boardId].posts.length,
+            createdAt: new Date().getTime(),
             userPhoto: '',
             boardId: data.boardId,
             comments: []
