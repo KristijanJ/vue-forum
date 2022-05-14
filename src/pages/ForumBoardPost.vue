@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import { getForumBoards } from '../assets/mocks/forumBoardsMockData';
+import { mapState } from 'vuex';
 
 import PostView from '../components/PostView.vue';
 import PostComment from '../components/PostComment.vue';
@@ -32,12 +32,10 @@ export default {
         PostView,
         PostComment
     },
-    data () {
-        return {
-            forumBoards: getForumBoards()
-        };
-    },
     computed: {
+        ...mapState([
+            'forumBoards'
+        ]),
         selectedForumBoardPost () {
             const board = this.forumBoards[this.$route.params.id];
             if (!board) {

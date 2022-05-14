@@ -24,14 +24,14 @@
 </template>
 
 <script>
-import { getForumBoards } from '../assets/mocks/forumBoardsMockData';
+import { mapState } from 'vuex';
 
 export default {
     name: 'PosAddNewPage',
-    data () {
-        return {
-            forumBoards: getForumBoards()
-        };
+    computed: {
+        ...mapState([
+            'forumBoards'
+        ])
     },
     methods: {
         handleAddNewPost () {

@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { getForumBoards } from '../assets/mocks/forumBoardsMockData';
+import { mapState } from 'vuex';
 
 import PostPreview from '../components/PostPreview.vue';
 
@@ -25,12 +25,10 @@ export default {
     components: {
         PostPreview
     },
-    data () {
-        return {
-            forumBoards: getForumBoards()
-        };
-    },
     computed: {
+        ...mapState([
+            'forumBoards'
+        ]),
         selectedForumBoard () {
             return this.forumBoards[this.$route.params.id] || {};
         }
