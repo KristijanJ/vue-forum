@@ -22,8 +22,15 @@
 
         <div class="forum-board-separator" />
 
-        <div class="forum-board-latest-post">
-            No new posts
+        <div class="forum-board-latest-post line-clamp">
+            <div v-if="forumBoard.posts.length">
+                <router-link :to="`/board/${forumBoard.id}/post/${latestPost.id}`">
+                    {{ latestPost.title }}
+                </router-link>
+            </div>
+            <div v-else>
+                No new posts
+            </div>
         </div>
     </div>
 </template>
@@ -40,6 +47,12 @@ export default {
     computed: {
         iconColor () {
             return this.forumBoard.iconColor;
+        },
+        latestPost () {
+            if (!this.forumBoard.posts.length) {
+                return null;
+            }
+            return this.forumBoard.posts[this.forumBoard.posts.length - 1];
         }
     }
 };
@@ -86,6 +99,11 @@ export default {
 }
 .forum-board-latest-post {
     font-size: 14px;
+    flex: 0 0 120px;
+    overflow: hidden;
+}
+.forum-board-latest-post a {
+    color: #2c3e50;
 }
 
 @media screen and (max-width: 480px) {
