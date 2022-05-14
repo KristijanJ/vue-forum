@@ -1,4 +1,4 @@
-export default [
+export const getForumBoards = () => [
     {
         id: 0,
         title: 'Announcements',

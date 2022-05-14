@@ -1,14 +1,26 @@
 <template>
     <div class="container">
         <div class="page-header">
-            Announcements
+            {{ selectedForumBoard.title }}
         </div>
     </div>
 </template>
 
 <script>
+import { getForumBoards } from '../assets/mocks/forumBoardsMockData';
+
 export default {
-    name: 'ForumBoardPage'
+    name: 'ForumBoardPage',
+    data () {
+        return {
+            forumBoards: getForumBoards()
+        };
+    },
+    computed: {
+        selectedForumBoard () {
+            return this.forumBoards[this.$route.params.id] || {};
+        }
+    }
 };
 </script>
 

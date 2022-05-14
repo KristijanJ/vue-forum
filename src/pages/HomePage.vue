@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import forumBoardsMockData from '../assets/mocks/forumBoardsMockData';
+import { getForumBoards } from '../assets/mocks/forumBoardsMockData';
 
 import ForumBoard from '../components/ForumBoard.vue';
 
@@ -24,7 +24,7 @@ export default {
     },
     data () {
         return {
-            forumBoards: forumBoardsMockData
+            forumBoards: getForumBoards()
         };
     }
 };
