@@ -5,7 +5,7 @@
     <div class="post-text">
         {{ post.text }}
     </div>
-    <post-author-image-name :post="post" />
+    <post-author-image-name :post="post" show-small-photo />
 </template>
 
 <script>
