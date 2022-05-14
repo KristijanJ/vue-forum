@@ -36,12 +36,14 @@ const getAnnouncementPosts = () => {
         {
             id: '0',
             title: 'What kind of pets you have',
-            text: "I'm curious to know what kind of pets the forum users have. I thought this could be a nice way to get to know each other a little better, so I'll start! My dog is a five month old Italian mastiff (Cane Corso). Since I got him from Barcelona I thought a Spanish name would be suitable, and I named him Don Jefe, or Jefe for short (which means \"boss man\"). Jefe is a cute, little beast who eats 1.5 kg raw meat every day. He love to fart, snore and play."
+            text: "I'm curious to know what kind of pets the forum users have. I thought this could be a nice way to get to know each other a little better, so I'll start! My dog is a five month old Italian mastiff (Cane Corso). Since I got him from Barcelona I thought a Spanish name would be suitable, and I named him Don Jefe, or Jefe for short (which means \"boss man\"). Jefe is a cute, little beast who eats 1.5 kg raw meat every day. He love to fart, snore and play.",
+            userPhoto: 'user_one.png'
         },
         {
             id: '1',
             title: 'My pet',
-            text: "I have a Jack Russel Terrier called Milo. He can get a bit crazy some times but I love him. There once was someone who wanted to put their JRT through plastic surgery to look more like Milo. That's crazy and unacceptable! Here is a picture of him with the mask I bought for Katherine: http://stories.barkpost.com/wp-content/uploads/2014/04/dogmask.jpg. Sometimes, at night, he looks like this when he plays with the mask: http://www.mobuzz.tv/wp-content/uploads/2014/11/original.jpg"
+            text: "I have a Jack Russel Terrier called Milo. He can get a bit crazy some times but I love him. There once was someone who wanted to put their JRT through plastic surgery to look more like Milo. That's crazy and unacceptable! Here is a picture of him with the mask I bought for Katherine: http://stories.barkpost.com/wp-content/uploads/2014/04/dogmask.jpg. Sometimes, at night, he looks like this when he plays with the mask: http://www.mobuzz.tv/wp-content/uploads/2014/11/original.jpg",
+            userPhoto: 'user_two.jpg'
         }
     ];
 };
