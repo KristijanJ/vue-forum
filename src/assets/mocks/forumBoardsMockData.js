@@ -1,5 +1,6 @@
 export default [
     {
+        id: 0,
         title: 'Announcements',
         description: 'Announcements regarding our community',
         topics: 2,
@@ -9,6 +10,7 @@ export default [
         iconColor: '#eeca82'
     },
     {
+        id: 1,
         title: 'General Discussion',
         description: 'A place to talk about whatever you want',
         topics: 12,
@@ -18,6 +20,7 @@ export default [
         iconColor: '#2ac3e2'
     },
     {
+        id: 2,
         title: 'Comments & Feedback',
         description: 'Got a question? Ask away!',
         topics: 12,

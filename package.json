@@ -8,11 +8,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.2.25"
+    "vue": "^3.2.25",
+    "vue-router": "^4.0.15"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.3",
-    "vite": "^2.9.9",
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-loader": "^4.0.2",
@@ -21,6 +21,7 @@
     "eslint-plugin-promise": "^5.1.1",
     "eslint-plugin-vue": "^8.1.1",
     "eslint-webpack-plugin": "^2.5.4",
+    "vite": "^2.9.9",
     "vue-eslint-parser": "^8.0.1"
   }
 }
