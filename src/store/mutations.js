@@ -4,6 +4,7 @@ export default {
             ...data.newPost,
             id: state.forumBoards[data.boardId].posts.length,
             userPhoto: '',
+            boardId: data.boardId,
             comments: []
         };
         state.forumBoards[data.boardId].posts.push(newPost);

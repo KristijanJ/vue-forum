@@ -3,19 +3,17 @@
         <div class="page-header">
             Latest posts
         </div>
-        <template v-for="(latestPost, i) in latestPosts" :key="i">
-            <post-preview
-                v-for="(post, index) in latestPost.posts"
-                :key="index"
-                :post="post"
-                :board-id="latestPost.board"
-            />
-        </template>
+        <post-preview
+            v-for="(post, index) in latestPosts"
+            :key="index"
+            :post="post"
+            :board-id="post.boardId"
+        />
     </div>
 </template>
 
 <script>
-import { getLatestPosts } from '../assets/mocks/forumBoardsMockData';
+import { mapGetters } from 'vuex';
 
 import PostPreview from '../components/PostPreview.vue';
 
@@ -24,10 +22,10 @@ export default {
     components: {
         PostPreview
     },
-    data () {
-        return {
-            latestPosts: getLatestPosts()
-        };
+    computed: {
+        ...mapGetters([
+            'latestPosts'
+        ])
     }
 };
 </script>
