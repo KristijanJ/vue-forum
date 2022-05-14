@@ -1,6 +1,14 @@
 <template>
     <div class="container">
+        <div class="page-nav-back">
+            <router-link :to="`/board/${$route.params.id}`">
+                <i class="fas fa-angle-left" /> Back
+            </router-link>
+        </div>
         <div class="page-header">
+            {{ selectedForumBoardPost.title }}
+        </div>
+        <div class="post-text">
             {{ selectedForumBoardPost.text }}
         </div>
     </div>

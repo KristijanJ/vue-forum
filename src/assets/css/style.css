@@ -13,6 +13,16 @@
     margin-bottom: 20px;
 }
 
+.page-nav-back {
+    color: #cccccc;
+    margin-bottom: 10px;
+}
+
+.page-nav-back > a {
+    color: #cccccc;
+    text-decoration: none;
+}
+
 .btn {
     cursor: pointer;
     padding: 8px 12px;
