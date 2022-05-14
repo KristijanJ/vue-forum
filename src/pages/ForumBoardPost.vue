@@ -6,7 +6,7 @@
             </router-link>
         </div>
         <post-view :post="selectedForumBoardPost" />
-        <div v-if="selectedForumBoardPost.comments.length" class="post-comment-wrapper">
+        <div v-if="selectedForumBoardPost.comments.length" class="post-comment-container">
             <post-comment
                 v-for="(comment, index) in selectedForumBoardPost.comments"
                 :key="index"
@@ -47,7 +47,7 @@ export default {
 </script>
 
 <style scoped>
-.post-comment-wrapper {
+.post-comment-container {
     margin-top: 30px;
     border-top: 1px solid #cccccc;
 }

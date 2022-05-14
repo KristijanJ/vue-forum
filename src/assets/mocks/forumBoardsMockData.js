@@ -74,7 +74,27 @@ const getGeneralDiscussionPosts = () => {
             comments: [
                 {
                     id: 0,
-                    text: 'wow'
+                    text: 'wow',
+                    author: {
+                        name: 'Michael Jordan',
+                        userPhoto: 'user_three.jpg'
+                    }
+                },
+                {
+                    id: 1,
+                    text: 'You should try their beef stew!',
+                    author: {
+                        name: 'John Snow',
+                        userPhoto: 'user_one.png'
+                    }
+                },
+                {
+                    id: 2,
+                    text: 'Good to know before my trip there. Thanks',
+                    author: {
+                        name: 'Christine',
+                        userPhoto: 'user_four.jpg'
+                    }
                 }
             ]
         }
