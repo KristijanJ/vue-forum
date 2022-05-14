@@ -5,13 +5,15 @@ import App from './App.vue';
 import HomePage from './pages/HomePage.vue';
 import ForumBoardPage from './pages/ForumBoardPage.vue';
 import ForumBoardPost from './pages/ForumBoardPost.vue';
+import LatestPostsPage from './pages/LatestPostsPage.vue';
 
 const app = createApp(App);
 
 const routes = [
     { path: '/', component: HomePage },
     { path: '/board/:id', component: ForumBoardPage },
-    { path: '/board/:id/post/:postId', component: ForumBoardPost }
+    { path: '/board/:id/post/:postId', component: ForumBoardPost },
+    { path: '/latest-posts', component: LatestPostsPage }
 ];
 
 const router = createRouter({
