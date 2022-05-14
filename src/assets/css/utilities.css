@@ -1,7 +1,15 @@
+.m-5-r {
+    margin-right: 5px;
+}
+
 .m-10-r {
     margin-right: 10px;
 }
 
 .m-30-b {
     margin-bottom: 30px;
+}
+
+.m-auto-l {
+    margin-left: auto;
 }
