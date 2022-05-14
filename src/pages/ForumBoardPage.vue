@@ -3,6 +3,9 @@
         <div class="page-header">
             {{ selectedForumBoard.title }}
         </div>
+        <div v-for="(post, index) in selectedForumBoard.posts" :key="index">
+            {{ post.text }}
+        </div>
     </div>
 </template>
 

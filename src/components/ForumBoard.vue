@@ -19,7 +19,7 @@
                 <span class="forum-board-data-item-text">topics</span>
             </div>
             <div class="forum-board-data-item">
-                <span class="forum-board-data-item-num">{{ forumBoard.posts }}</span>
+                <span class="forum-board-data-item-num">{{ forumBoard.posts.length }}</span>
                 <span class="forum-board-data-item-text">posts</span>
             </div>
         </div>
