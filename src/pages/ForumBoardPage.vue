@@ -52,22 +52,4 @@ export default {
     color: #2c3e50;
     font-weight: 500;
 }
-.post-user-photo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    color: #000000;
-}
-.post-user-photo-bg {
-    background: #eeeeee;
-}
-.post-user-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-}
 </style>

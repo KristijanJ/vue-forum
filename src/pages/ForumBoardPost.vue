@@ -11,6 +11,13 @@
         <div class="post-text">
             {{ selectedForumBoardPost.text }}
         </div>
+        <div class="post-author">
+            <div class="post-user-photo m-10-r" :class="{ 'post-user-photo-bg': !selectedForumBoardPost.userPhoto }">
+                <img v-if="selectedForumBoardPost.userPhoto" :src="`/img/user-photos/${selectedForumBoardPost.userPhoto}`" alt="User photo">
+                <i v-else class="fas fa-user" />
+            </div>
+            Author
+        </div>
     </div>
 </template>
 
@@ -37,5 +44,10 @@ export default {
 </script>
 
 <style scoped>
+.post-text {
+    margin-bottom: 10px;
+}
+.post-author {
 
+}
 </style>
