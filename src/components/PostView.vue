@@ -25,7 +25,6 @@ export default {
     },
     computed: {
         formattedCreatedAt () {
-            console.log(this.post.createdAt);
             const date = new Date(this.post.createdAt);
             return date.toISOString().split('T')[0];
         }

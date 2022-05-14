@@ -1,9 +1,9 @@
 <template>
     <div class="container">
         <div class="page-nav-back">
-            <router-link :to="`/board/${$route.params.id}`">
+            <a href="javascript:void(0);" @click="$router.back()">
                 <i class="fas fa-angle-left" /> Back
-            </router-link>
+            </a>
         </div>
         <post-view :post="selectedForumBoardPost" />
 
