@@ -27,6 +27,6 @@ export default {
 
 <style scoped>
 .post-text {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 </style>
