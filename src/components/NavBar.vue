@@ -14,9 +14,7 @@
         </div>
         <div class="nav-bar-">
             <div class="nav-bar-element">
-                <button class="btn">
-                    Sign Up
-                </button>
+                <i class="fas fa-user m-10-r" /> John Smith
             </div>
         </div>
     </div>
@@ -65,8 +63,5 @@ export default {
 .nav-bar-element > a {
     color: #2c3e50;
     text-decoration: none;
-}
-.nav-bar-element > * {
-    cursor: pointer;
 }
 </style>
