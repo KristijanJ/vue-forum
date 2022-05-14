@@ -6,17 +6,19 @@
             </router-link>
         </div>
         <post-view :post="selectedForumBoardPost" />
-        <div v-if="selectedForumBoardPost.comments.length">
-            <div class="post-comments-title">
+
+        <div class="post-comments-title">
+            <div class="m-30-b">
                 Comments
             </div>
-            <post-comment
-                v-for="(comment, index) in selectedForumBoardPost.comments"
-                :key="index"
-                :post-comment="comment"
-                :post="selectedForumBoardPost"
-            />
+            <comment-add-new-to-post :board-id="$route.params.id" :post-id="selectedForumBoardPost.id" />
         </div>
+        <post-comment
+            v-for="(comment, index) in selectedForumBoardPost.comments"
+            :key="index"
+            :post-comment="comment"
+            :post="selectedForumBoardPost"
+        />
     </div>
 </template>
 
@@ -25,12 +27,14 @@ import { mapState } from 'vuex';
 
 import PostView from '../components/PostView.vue';
 import PostComment from '../components/PostComment.vue';
+import CommentAddNewToPost from '../components/CommentAddNewToPost.vue';
 
 export default {
     name: 'ForumBoardPost',
     components: {
         PostView,
-        PostComment
+        PostComment,
+        CommentAddNewToPost
     },
     computed: {
         ...mapState([
