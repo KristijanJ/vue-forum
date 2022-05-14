@@ -2,13 +2,13 @@
     <div class="post-author">
         <div
             class="post-user-photo m-10-r"
-            :class="{ 'post-user-photo-bg': !post.userPhoto, 'photo-small': showSmallPhoto }"
+            :class="{ 'post-user-photo-bg': !authorPhoto, 'photo-small': showSmallPhoto }"
         >
-            <img v-if="post.userPhoto" :src="`/img/user-photos/${post.userPhoto}`" alt="User photo">
+            <img v-if="authorPhoto" :src="`/img/user-photos/${authorPhoto}`" alt="User photo">
             <i v-else class="fas fa-user" />
         </div>
         <div v-if="showAuthorName">
-            Author
+            {{ authorName }}
         </div>
     </div>
 </template>
@@ -17,9 +17,13 @@
 export default {
     name: 'PostAuthorImageName',
     props: {
-        post: {
-            type: Object,
-            required: true
+        authorPhoto: {
+            type: String,
+            default: ''
+        },
+        authorName: {
+            type: String,
+            default: 'Admin'
         },
         showAuthorName: {
             type: Boolean,
@@ -48,8 +52,8 @@ export default {
     color: #000000;
 }
 .post-user-photo.photo-small {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
 }
 .post-user-photo-bg {
     background: #eeeeee;

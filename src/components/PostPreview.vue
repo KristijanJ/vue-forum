@@ -1,6 +1,6 @@
 <template>
     <div class="post">
-        <post-author-image-name :post="post" :show-author-name="false" />
+        <post-author-image-name :author-photo="post.userPhoto" :show-author-name="false" />
         <div class="post-info">
             <router-link :to="`/board/${boardId}/post/${post.id}`" class="post-text">
                 {{ post.title }}

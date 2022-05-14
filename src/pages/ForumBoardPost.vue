@@ -11,6 +11,7 @@
                 v-for="(comment, index) in selectedForumBoardPost.comments"
                 :key="index"
                 :post-comment="comment"
+                :post="selectedForumBoardPost"
             />
         </div>
     </div>
